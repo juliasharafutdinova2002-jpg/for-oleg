@@ -1,0 +1,493 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    font-family: Georgia, "Times New Roman", serif;
+    color: #49383e;
+
+    background:
+        radial-gradient(
+            circle at 50% 35%,
+            #fffafb 0%,
+            #f8edef 45%,
+            #f1e1e5 100%
+        );
+}
+
+
+/* ========================= */
+/* ОСНОВНОЙ КОНТЕЙНЕР */
+/* ========================= */
+
+.site {
+    min-height: 100vh;
+}
+
+
+/* ========================= */
+/* ЭКРАНЫ */
+/* ========================= */
+
+.screen {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+    text-align: center;
+}
+
+
+/* ========================= */
+/* СКРЫТЫЕ ЭКРАНЫ */
+/* ========================= */
+
+.hidden {
+    display: none !important;
+}
+
+
+/* ========================= */
+/* СЕРДЕЧКО */
+/* ========================= */
+
+.heart {
+    font-size: 58px;
+    color: #b97989;
+
+    margin-bottom: 20px;
+
+    animation: heartbeat 2.5s ease-in-out infinite;
+}
+
+
+/* ========================= */
+/* МАЛЕНЬКИЙ ВЕРХНИЙ ТЕКСТ */
+/* ========================= */
+
+.small-text {
+    margin: 0 0 20px;
+
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+
+    color: #a7838c;
+}
+
+
+/* ========================= */
+/* ЗАГОЛОВКИ */
+/* ========================= */
+
+h1 {
+    margin: 0 0 28px;
+
+    font-size: clamp(42px, 8vw, 72px);
+    font-weight: normal;
+    line-height: 1.05;
+    letter-spacing: -1px;
+}
+
+h2 {
+    margin: 0 0 30px;
+
+    font-size: clamp(36px, 7vw, 60px);
+    font-weight: normal;
+    line-height: 1.1;
+}
+
+
+/* ========================= */
+/* ОБЫЧНЫЙ ТЕКСТ */
+/* ========================= */
+
+.description {
+    margin: 0 0 35px;
+
+    font-size: 18px;
+    line-height: 1.75;
+
+    color: #69575d;
+}
+
+
+/* ========================= */
+/* ОСНОВНАЯ КНОПКА */
+/* ========================= */
+
+.main-button {
+    padding: 14px 30px;
+
+    border: 1px solid #c894a1;
+    border-radius: 50px;
+
+    background: rgba(255, 255, 255, 0.45);
+
+    color: #76505b;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.main-button:hover {
+    transform: translateY(-3px);
+
+    background: rgba(255, 255, 255, 0.8);
+
+    box-shadow:
+        0 8px 25px rgba(120, 70, 80, 0.12);
+}
+
+
+/* ========================= */
+/* ПЕРВЫЙ ЭКРАН */
+/* ========================= */
+
+.first-screen {
+    animation: appear 1.2s ease;
+}
+
+
+/* ========================= */
+/* БЛОК С ПРИЧИНОЙ */
+/* ========================= */
+
+.reason-box {
+    width: min(90%, 600px);
+    min-height: 130px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 20px;
+    padding: 30px;
+
+    border-top: 1px solid rgba(185, 121, 137, 0.35);
+    border-bottom: 1px solid rgba(185, 121, 137, 0.35);
+}
+
+.reason-box p {
+    margin: 0;
+
+    font-size: 22px;
+    line-height: 1.6;
+
+    color: #59444b;
+
+    animation: reasonAppear 0.5s ease;
+}
+
+
+/* ========================= */
+/* КНОПКА «ЕЩЁ ОДНА ПРИЧИНА» */
+/* ========================= */
+
+.next-button {
+    margin-top: 15px;
+
+    border: none;
+    background: transparent;
+
+    color: #9f707c;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.next-button:hover {
+    letter-spacing: 1px;
+}
+
+
+/* ========================= */
+/* ВОСПОМИНАНИЯ */
+/* ========================= */
+
+.memory-line {
+    width: min(90%, 650px);
+
+    margin: 10px auto 35px;
+}
+
+.memory-item {
+    padding: 22px 10px;
+
+    border-bottom: 1px solid rgba(185, 121, 137, 0.25);
+}
+
+.memory-item:last-child {
+    border-bottom: none;
+}
+
+.memory-item span {
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    color: #ae808b;
+}
+
+.memory-item p {
+    margin: 10px 0 0;
+
+    font-size: 18px;
+    line-height: 1.5;
+
+    color: #59464c;
+}
+
+
+/* ========================= */
+/* ФОТОГРАФИИ */
+/* ========================= */
+
+.photo-memory {
+    width: min(88%, 420px);
+
+    margin: 35px auto 45px;
+
+    text-align: center;
+}
+
+.photo-memory img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    border-radius: 3px;
+
+    box-shadow:
+        0 12px 35px rgba(80, 45, 55, 0.15);
+
+    transform: rotate(-1.2deg);
+
+    transition: transform 0.4s ease;
+}
+
+.photo-memory img:hover {
+    transform: rotate(0deg) scale(1.02);
+}
+
+.second-photo img {
+    transform: rotate(1.2deg);
+}
+
+.second-photo img:hover {
+    transform: rotate(0deg) scale(1.02);
+}
+
+.photo-date {
+    margin-top: 22px;
+    margin-bottom: 8px;
+
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    color: #ae808b;
+}
+
+.photo-caption {
+    margin: 0;
+
+    font-size: 18px;
+    line-height: 1.5;
+
+    color: #59464c;
+}
+
+.memory-ending {
+    margin: 45px auto 25px;
+
+    font-size: 17px;
+    line-height: 1.6;
+
+    color: #765c64;
+}
+
+
+/* ========================= */
+/* ЭКРАН БЛИЗОСТИ */
+/* ========================= */
+
+.closeness-screen {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.closeness-buttons {
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+
+    width: min(90%, 360px);
+
+    margin-top: 25px;
+}
+
+.closeness-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    width: 100%;
+
+    padding: 17px 25px;
+
+    border: 1px solid rgba(159, 112, 124, 0.45);
+    border-radius: 50px;
+
+    background: rgba(255, 255, 255, 0.35);
+
+    color: #59464c;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 17px;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.closeness-button:hover {
+    transform: translateY(-2px);
+
+    background: rgba(255, 255, 255, 0.7);
+
+    box-shadow:
+        0 8px 25px rgba(100, 60, 70, 0.1);
+}
+
+.closeness-icon {
+    font-size: 22px;
+}
+
+.tiny-note {
+    margin-top: 25px;
+
+    font-size: 12px;
+    letter-spacing: 1px;
+
+    color: #a47b85;
+}
+
+
+/* ========================= */
+/* АНИМАЦИЯ СЕРДЕЧКА */
+/* ========================= */
+
+@keyframes heartbeat {
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.08);
+    }
+}
+
+
+/* ========================= */
+/* АНИМАЦИЯ ПОЯВЛЕНИЯ */
+/* ========================= */
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ========================= */
+/* АНИМАЦИЯ ПРИЧИНЫ */
+/* ========================= */
+
+@keyframes reasonAppear {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ========================= */
+/* ТЕЛЕФОН */
+/* ========================= */
+
+@media (max-width: 600px) {
+
+    .screen {
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 48px;
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+
+    .description {
+        font-size: 17px;
+    }
+
+    .reason-box {
+        padding: 25px 20px;
+    }
+
+    .reason-box p {
+        font-size: 19px;
+    }
+
+    .photo-memory {
+        width: 90%;
+    }
+}

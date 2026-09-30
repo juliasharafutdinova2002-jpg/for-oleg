@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>любимому 🤍</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="site">
+
+        <!-- ========================= -->
+        <!-- ПЕРВЫЙ ЭКРАН -->
+        <!-- ========================= -->
+
+        <section
+            class="screen first-screen"
+            id="welcome"
+        >
+
+            <div class="heart">
+                ♡
+            </div>
+
+            <p class="small-text">
+                маленькое место
+            </p>
+
+            <h1>
+                только для тебя
+            </h1>
+
+            <p class="description">
+                я хотела оставить здесь<br>
+                кое-что, что нельзя просто<br>
+                отправить одним сообщением.
+            </p>
+
+            <button
+                class="main-button"
+                onclick="openSite()"
+            >
+                открыть ♡
+            </button>
+
+        </section>
+
+
+        <!-- ========================= -->
+        <!-- ВТОРОЙ ЭКРАН — ПРИЧИНЫ -->
+        <!-- ========================= -->
+
+        <section
+            class="screen second-screen hidden"
+            id="main"
+        >
+
+            <p class="small-text">
+                для тебя
+            </p>
+
+            <h2>
+                знаешь, почему ты<br>
+                особенный?
+            </h2>
+
+            <p class="description">
+                причин слишком много,<br>
+                чтобы уместить их в одном сообщении.
+            </p>
+
+            <div class="reason-box">
+
+                <p id="reason">
+                    даже за своей сдержанностью ты умеешь быть очень тёплым.
+                </p>
+
+            </div>
+
+            <button
+                class="main-button"
+                onclick="newReason()"
+            >
+                ещё одна причина ♡
+            </button>
+
+            <br>
+
+            <button
+                class="next-button"
+                onclick="openMemories()"
+            >
+                дальше →
+            </button>
+
+        </section>
+
+
+        <!-- ========================= -->
+        <!-- ТРЕТИЙ ЭКРАН — ВОСПОМИНАНИЯ -->
+        <!-- ========================= -->
+
+        <section
+            class="screen memories-screen hidden"
+            id="memories"
+        >
+
+            <p class="small-text">
+                немного нашего
+            </p>
+
+            <h2>
+                то, что хочется<br>
+                помнить.
+            </h2>
+
+            <p class="description">
+                некоторые моменты становятся<br>
+                особенными просто потому,<br>
+                что мы прожили их вместе.
+            </p>
+
+
+            <!-- ПЕРВАЯ ФОТОГРАФИЯ -->
+
+            <div class="photo-memory">
+
+                <img
+                    src="images/sochi.jpeg"
+                    alt="Мы в Сочи"
+                >
+
+                <p class="photo-date">
+                    04.06.2026
+                </p>
+
+                <p class="photo-caption">
+                    день, когда началось<br>
+                    наше маленькое путешествие
+                </p>
+
+            </div>
+
+
+            <!-- ВТОРАЯ ФОТОГРАФИЯ -->
+
+            <div class="photo-memory second-photo">
+
+                <img
+                    src="images/rosa.jpeg"
+                    alt="Мы в горах"
+                >
+
+                <p class="photo-date">
+                    роза хутор
+                </p>
+
+                <p class="photo-caption">
+                    горы, среди которых<br>
+                    особенно хотелось быть рядом
+                </p>
+
+            </div>
+
+
+            <p class="memory-ending">
+                и это только несколько<br>
+                из наших любимых моментов 🤍
+            </p>
+
+
+            <button
+                class="next-button"
+                onclick="openCloseness()"
+            >
+                дальше →
+            </button>
+
+        </section>
+
+
+        <!-- ========================= -->
+        <!-- ЧЕТВЁРТЫЙ ЭКРАН — БЛИЗОСТЬ -->
+        <!-- ========================= -->
+
+        <section
+            class="screen closeness-screen hidden"
+            id="closeness"
+        >
+
+            <div class="heart">
+                ♡
+            </div>
+
+            <p class="small-text">
+                кнопки близости
+            </p>
+
+            <h2>
+                мне хочется...
+            </h2>
+
+            <p class="description">
+                иногда словами это объяснять<br>
+                совсем не хочется.
+            </p>
+
+
+            <div class="closeness-buttons">
+
+                <!-- КНОПКА ОБНЯТЬ -->
+
+                <button
+                    class="closeness-button"
+                    onclick="sendTelegram('обнять')"
+                >
+
+                    <span class="closeness-icon">
+                        ♡
+                    </span>
+
+                    <span>
+                        обнять тебя
+                    </span>
+
+                </button>
+
+
+                <!-- КНОПКА ПОЦЕЛОВАТЬ -->
+
+                <button
+                    class="closeness-button"
+                    onclick="sendTelegram('поцеловать')"
+                >
+
+                    <span class="closeness-icon">
+                        ♥
+                    </span>
+
+                    <span>
+                        поцеловать тебя
+                    </span>
+
+                </button>
+
+            </div>
+
+
+            <p class="tiny-note">
+                можно выбрать оба 🤍
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- ========================= -->
+    <!-- ПОДКЛЮЧАЕМ ОТДЕЛЬНЫЙ JS -->
+    <!-- ========================= -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
