@@ -26,7 +26,7 @@ export default async function handler(req, res) {
         let message;
 
         if (action === "обнять") {
-            message = "🤍 олег хочет тебя обнять";
+            message = "🤍 олег хочет обниматься";
         } else if (action === "поцеловать") {
             message = "💋 олег хочет поцелуйчик";
         } else {
