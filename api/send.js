@@ -26,11 +26,11 @@ export default async function handler(req, res) {
         let message;
 
         if (action === "обнять") {
-            message = "🤍 Олег нажал кнопку «обнять тебя» на сайте.";
+            message = "🤍 олег хочет тебя обнять";
         } else if (action === "поцеловать") {
-            message = "💋 Олег нажал кнопку «поцеловать тебя» на сайте.";
+            message = "💋 олег хочет поцелуйчик";
         } else {
-            message = "🤍 Олег нажал кнопку на сайте: " + action;
+            message = "🤍 олег нажал кнопку на сайте: " + action;
         }
 
         const telegramResponse = await fetch(
